@@ -49,11 +49,29 @@ Bitte nutzt die ["Issue"-Funktion](https://github.com/mathContao/xG-Apache-Firew
 ** 7g_log.txt (Log-Datei)
 * beide Dateien auf den Server, direkt neben die .htaccess-Datei (in Contao 4.9: /web/) hochladen
 * ggf. die Dateirechte anpassen (Es werden benötigt: CHMOD 644)
-### Schritt 6: Logging aktivieren
+### Schritt 6: Log schützen
+* in die .htaccess Datei am Anfang einfügen:
+Wenn der Apache Server Version 2.3 und kleiner ist:
+```
+<IfModule !mod_authz_core.c>
+	<Files ~ "7g_log\.txt">
+		Deny from all
+	</Files>
+</IfModule>
+```
+ab Apache Server 2.4:
+```
+<IfModule mod_authz_core.c>
+	<Files ~ "7g_log\.txt">
+		Require all denied
+	</Files>
+</IfModule>
+```
+### Schritt 7: Logging aktivieren
 * .htaccess (siehe oben) öffnen
 * mehrmals `RewriteRule .* - [F,L]` auskommentieren (`#` davor schreiben), `RewriteRule .* /7g_log.php?....`einkommentieren (`#` entfernen)
 
-Beispiel Zeile 53-55:
+Beispiel Zeile 58-60:
 (vorher):
 ```	
 	RewriteRule .* - [F,L]
@@ -66,4 +84,5 @@ Beispiel Zeile 53-55:
 	
 	RewriteRule .* /7g_log.php?log [L,NE,E=7G_QUERY_STRING:%1___%2___%3]
 ```
-weitere Zeilen: 91-93, 108-110, 121-123, 135-137, 148-150
+weitere Zeilen: 96-98, 113-115, 126-128, 140-142, 153-155
+
