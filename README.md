@@ -1,6 +1,7 @@
 # nG-Apache-Firewall-for-Contao
-Just a little collection how to configure the nG firewall (made by Jeff Starr) in Contao CMS. 
-Eine kleine Sammlung wie die xG firewall (von Jeff Starr) in Contao CMS konfiguriert wird.
+Just a little collection how to configure the nG firewall (made by Jeff Starr) in Contao CMS.
+
+Eine kleine Sammlung wie die nG firewall (von Jeff Starr) in Contao CMS konfiguriert wird.
 
 ## Ziel
 diverse Bots/Crawler scannen das Internet regelmäßig nach Schwachstellen oder auf der Suche nach Inhalten (z.B. Mailadressen). Auch die eigene Webseite ist davon regelmäßig betroffen. Diverse "Hausmittelchen" werden durch die Webseite ausprobiert, um solche Bots/Crawler auf Abstand zu halten.
