@@ -111,11 +111,13 @@ In 7g_log.php kann das Logging etwas angepasst werden:
 `define('SEVENGEXIT', 'Goodbye');`
 
 Änderungsbeispiel
+
 `define('SEVENGEXIT', '7G: Error - 403. Byebye');`
 ### Zeitzone des Logs
 `date_default_timezone_set('UTC');`
 
 Änderungsbeispiel für die passende Zeitzone in Deutschland
+
 `date_default_timezone_set('UTC+2');`
 
 ---
