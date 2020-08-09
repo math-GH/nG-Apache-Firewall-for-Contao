@@ -67,6 +67,7 @@ ab Apache Server 2.4:
 	</Files>
 </IfModule>
 ```
+* Testen: Aufruf von https://domain.tld/7g_log.txt erzeugt ein Forbidden (Error 403)
 ### Schritt 7: Logging aktivieren
 * .htaccess (siehe oben) öffnen
 * mehrmals `RewriteRule .* - [F,L]` auskommentieren (`#` davor schreiben), `RewriteRule .* /7g_log.php?....`einkommentieren (`#` entfernen)
@@ -85,4 +86,6 @@ Beispiel Zeile 58-60:
 	RewriteRule .* /7g_log.php?log [L,NE,E=7G_QUERY_STRING:%1___%2___%3]
 ```
 weitere Zeilen: 96-98, 113-115, 126-128, 140-142, 153-155
-
+### Schritt 8: Log einsehen
+* per FTP die Datei /web/7g_log.txt aufrufen
+* weitere Detailinfos siehe in der Dokumentation: https://perishablepress.com/7g-firewall-log-blocked-requests/#reading
