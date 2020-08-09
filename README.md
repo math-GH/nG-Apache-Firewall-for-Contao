@@ -26,7 +26,7 @@ Die Originalanleitung findet sich auf Englisch: https://perishablepress.com/7g-f
 ### Backup nicht vergessen
 Wie immer: ein Backup hilft immer. Besonders wird hier die .htaccess bearbeitet, die unbedingt vorher (!) gesichert werden musst.
 ### Schritt 1: Download
-* Download der Datei auf https://perishablepress.com/7g-firewall/#download (Version 1.2, 11KB, Stand: August 2020, Dateiname: 7G-Firewall-v1.2.txt)
+* Download der Datei auf https://perishablepress.com/7g-firewall/#download (Version 1.2, 11KB, Stand: August 2020, Text-Datei: 7G-Firewall-v1.2.txt)
 ### Schritt 2: .htaccess Datei bearbeiten
 * Contao 4.9: /web/.htaccess
 * Backup machen (sicher ist sicher!)
@@ -36,3 +36,15 @@ Wie immer: ein Backup hilft immer. Besonders wird hier die .htaccess bearbeitet,
 * Aufruf der Webseite mit z.B. "/vbulletin/" in der Adresse (z.B.: https://domain.tld/vbulletin/)
 * es ist ein kurzer Text auf weißen Hintergrund zu sehen "Goodbye"
 * der Server antwortet mit einem 403 Fehler (Forbidden)
+### Zugabe: Wissen was geblockt wurde
+Diese Firewall kann ggf. zu viel blocken. 
+Dafür gibt es eine Möglichkeit ein Log zu erstellen. Die ausführliche englische Beschreibung: https://perishablepress.com/7g-firewall-log-blocked-requests/
+Bitte nutzt die ["Issue"-Funktion](https://github.com/mathContao/xG-Apache-Firewall-for-Contao/issues) hier bei Github, um eure Erfahrungen zu teilen
+### Schritt 5: Logging-Funktionen bereitstellen
+* Download: https://perishablepress.com/7g-firewall-log-blocked-requests/#download (Version 1.1, 2KB, Stand: August 2020, ZIP-Datei: 7G-Log-Blocked-Requests-v1.1.zip)
+* die ZIP-Datei entpacken
+* es werden 2 Dateien benötigt:
+** 7g_log.php (hier ist das Tool enthalten, dass das von der .htaccess aufgerufen wird und in die Log-Dateien die Daten schreibt)
+** 7g_log.txt (Log-Datei)
+* beide Dateien auf den Server, direkt neben die .htaccess-Datei (in Contao 4.9: /web/) hochladen
+* ggf. die Dateirechte anpassen (Es werden benötigt: CHMOD 644)
