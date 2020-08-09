@@ -1,16 +1,30 @@
 {
     "name": " mathContao/nG-Apache-Firewall-for-Contao",
     "description": "Just a little collection how to configure the nG firewall (made by Jeff Starr) in Contao CMS. Eine kleine Sammlung wie die nG firewall (von Jeff Starr) in Contao CMS konfiguriert wird.",
-     "keywords": [
-      "contao",
+    "keywords": [
+      "Contao",
       "Security",
       "Firewall",
       "Sicherheit",
       "Spam-Schutz",
       "6G Firewall",
       "7G Firewall",
-      "Jeff Starr"
+      "Jeff Starr",
+      "htaccess",
+      "Apache"
     ],
+    "authors": [
+        {
+            "name": "mathContao",
+            "homepage": "https://github.com/mathContao/nG-Apache-Firewall-for-Contao/"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/mathContao/nG-Apache-Firewall-for-Contao/issues",
+        "source": "https://github.com/mathContao/nG-Apache-Firewall-for-Contao/",
+        "forum": "https://community.contao.org/de/showthread.php?78629-Anleitung-simple-Firewall-f%C3%BCr-Contao-mit-Hilfe-von-7G-Firewall",
+        "docs": "https://github.com/mathContao/nG-Apache-Firewall-for-Contao/"
+    },
     "type": "contao-bundle",
     "require": {
         "php": "^7.2",
