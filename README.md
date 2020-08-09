@@ -40,7 +40,7 @@ Wie immer: ein Backup hilft immer. Besonders wird hier die .htaccess bearbeitet,
 Diese Firewall kann ggf. zu viel blocken. 
 Dafür gibt es eine Möglichkeit ein Log zu erstellen. Die ausführliche englische Beschreibung: https://perishablepress.com/7g-firewall-log-blocked-requests/
 Bitte nutzt die ["Issue"-Funktion](https://github.com/mathContao/xG-Apache-Firewall-for-Contao/issues) hier bei Github, um eure Erfahrungen zu teilen
-### Schritt 5: Logging-Funktionen bereitstellen
+### Schritt 5: Logging-Funktionen vorbereiten
 * Download: https://perishablepress.com/7g-firewall-log-blocked-requests/#download (Version 1.1, 2KB, Stand: August 2020, ZIP-Datei: 7G-Log-Blocked-Requests-v1.1.zip)
 * die ZIP-Datei entpacken
 * es werden 2 Dateien benötigt:
@@ -48,3 +48,6 @@ Bitte nutzt die ["Issue"-Funktion](https://github.com/mathContao/xG-Apache-Firew
 ** 7g_log.txt (Log-Datei)
 * beide Dateien auf den Server, direkt neben die .htaccess-Datei (in Contao 4.9: /web/) hochladen
 * ggf. die Dateirechte anpassen (Es werden benötigt: CHMOD 644)
+### Schritt 6: Logging aktivieren
+* .htaccess (siehe oben) öffnen
+* mehrmals `RewriteRule .* - [F,L]` auskommentieren (`#` davor schreiben), `RewriteRule .* /7g_log.php?....`einkommentieren (`#` entfernen)
