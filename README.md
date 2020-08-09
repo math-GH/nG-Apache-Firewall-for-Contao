@@ -4,6 +4,7 @@ Eine kleine Sammlung wie die xG firewall (von Jeff Starr) in Contao CMS konfigur
 
 ## Ziel
 diverse Bots/Crawler scannen das Internet regelmäßig nach Schwachstellen oder auf der Suche nach Inhalten (z.B. Mailadressen). Auch die eigene Webseite ist davon regelmäßig betroffen. Diverse "Hausmittelchen" werden durch die Webseite ausprobiert, um solche Bots/Crawler auf Abstand zu halten.
+
 Warum nicht diese Bots/Crawler bereits beim Betreten der Webseite abhalten?
 
 ## nG Apache Firewall/Blacklist
@@ -20,9 +21,9 @@ Open Source und frei nutzbar für alle ("open source and free for all to use"). 
 
 ## Anleitung für 7G Firewall
 ### Allgemeines
-Alle hier genannten Schritte erfolgen auf eigene Gefahr. Alle Angaben ohne Gewähr.
-Es ist jedoch nicht schwer und bedarf an sich nur Grundwissen.
-Die Originalanleitung findet sich auf Englisch: https://perishablepress.com/7g-firewall/
+* Alle hier genannten Schritte erfolgen auf eigene Gefahr. Alle Angaben ohne Gewähr.
+* Es ist jedoch nicht schwer und bedarf an sich nur Grundwissen.
+* Die Originalanleitung findet sich auf Englisch: https://perishablepress.com/7g-firewall/
 ### Backup nicht vergessen
 Wie immer: ein Backup hilft immer. Besonders wird hier die .htaccess bearbeitet, die unbedingt vorher (!) gesichert werden musst.
 ### Schritt 1: Download
@@ -51,3 +52,18 @@ Bitte nutzt die ["Issue"-Funktion](https://github.com/mathContao/xG-Apache-Firew
 ### Schritt 6: Logging aktivieren
 * .htaccess (siehe oben) öffnen
 * mehrmals `RewriteRule .* - [F,L]` auskommentieren (`#` davor schreiben), `RewriteRule .* /7g_log.php?....`einkommentieren (`#` entfernen)
+
+Beispiel Zeile 53-55:
+(vorher):
+```	
+	RewriteRule .* - [F,L]
+	
+	# RewriteRule .* /7g_log.php?log [L,NE,E=7G_QUERY_STRING:%1___%2___%3]
+```
+ (Nachher):
+```
+ 	# RewriteRule .* - [F,L]
+	
+	RewriteRule .* /7g_log.php?log [L,NE,E=7G_QUERY_STRING:%1___%2___%3]
+```
+weitere Zeilen: 91-93, 108-110, 121-123, 135-137, 148-150
