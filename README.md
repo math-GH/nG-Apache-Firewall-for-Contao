@@ -94,7 +94,8 @@ weitere Zeilen: 96-98, 113-115, 126-128, 140-142, 153-155
 ## Bekannte Probleme
 ### Layout defekt/CSS-Datei wird nicht mehr geladen
 * siehe Issue#1 (inkl. Lösung): https://github.com/mathContao/nG-Apache-Firewall-for-Contao/issues/1
-
+### /web/systems Ordner blockiert
+* siehe Issue#2 (inkl. Lösung): https://github.com/mathContao/nG-Apache-Firewall-for-Contao/issues/2
 
 ---
 Lizenz: diese (deutsche) Dokumentation stelle ich ebenfalls unter Open Source Lizenz: [CC-BY 3.0](https://creativecommons.org/licenses/by/3.0/de/)
