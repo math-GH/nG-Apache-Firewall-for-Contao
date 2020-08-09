@@ -18,7 +18,7 @@ Open Source und frei nutzbar für alle ("open source and free for all to use"). 
 ## Technische Voraussetzungen
 * Server: Apache 2.0+
 * Zugriff auf die .htaccess-Datei
-* die Anleitung bezieht sich auf die Arbeit mit Contao CMS (https://contao.org)
+* die Anleitung bezieht sich auf die Arbeit mit Contao CMS (https://contao.org). Bekannt Fehler und deren Lösung werden weiter unten aufgelistet.
 
 ## Anleitung für 7G Firewall
 ### Allgemeines
