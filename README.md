@@ -8,8 +8,8 @@ Warum nicht diese Bots/Crawler bereits beim Betreten der Webseite abhalten?
 
 ## nG Apache Firewall/Blacklist
 Jeff Starr (https://perishablepress.com/) stellt seit mehreren Jahren die "[nG Firewall](https://perishablepress.com/tag/ng/)"  kostenlos bereit, die sehr einfach zu konfigurieren ist.
-* [6G Firewall](https://perishablepress.com/6g/) (Release Jnauar 2016)
-* [7G Firewall](https://perishablepress.com/7g-firewall/) (Release Januar 2019)
+* [6G Firewall](https://perishablepress.com/6g/)
+* [7G Firewall](https://perishablepress.com/7g-firewall/) (Stable Release Januar 2020)
 ### Lizenz
 Open Source und frei nutzbar für alle ("open source and free for all to use"). Nur eine kleine Referenz in der .htaccess muss vorhanden bleiben.
 
@@ -17,3 +17,22 @@ Open Source und frei nutzbar für alle ("open source and free for all to use"). 
 * Server: Apache 2.0+
 * Zugriff auf die .htaccess-Datei
 * die Anleitung bezieht sich auf die Arbeit mit Contao CMS (https://contao.org)
+
+## Anleitung für 7G Firewall
+### Allgemeines
+Alle hier genannten Schritte erfolgen auf eigene Gefahr. Alle Angaben ohne Gewähr.
+Es ist jedoch nicht schwer und bedarf an sich nur Grundwissen.
+Die Originalanleitung findet sich auf Englisch: https://perishablepress.com/7g-firewall/
+### Backup nicht vergessen
+Wie immer: ein Backup hilft immer. Besonders wird hier die .htaccess bearbeitet, die unbedingt vorher (!) gesichert werden musst.
+### Schritt 1: Download
+* Download der Datei auf https://perishablepress.com/7g-firewall/#download (Version 1.2, 11KB, Stand: August 2020, Dateiname: 7G-Firewall-v1.2.txt)
+### Schritt 2: .htaccess Datei bearbeiten
+* Contao 4.9: /web/.htaccess
+* Backup machen (sicher ist sicher!)
+* den Inhalt aus der 7G Downloaddatei am ANFANG der .htaccess-Datei einfügen (nichts von dem vorherigen Inhalt darf überschrieben werden)
+* speichern und auf den Webserver an gleicher Stelle speichern
+### Schritt 3: Testen
+* Aufruf der Webseite mit z.B. "/vbulletin/" in der Adresse (z.B.: https://domain.tld/vbulletin/)
+* es ist ein kurzer Text auf weißen Hintergrund zu sehen "Goodbye"
+* der Server antwortet mit einem 403 Fehler (Forbidden)
