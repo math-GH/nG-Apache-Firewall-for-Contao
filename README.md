@@ -1,5 +1,5 @@
 # nG-Apache-Firewall-for-Contao
-Just a little collection how to configure the xG firewall (made by Jeff Starr) in Contao CMS. 
+Just a little collection how to configure the nG firewall (made by Jeff Starr) in Contao CMS. 
 Eine kleine Sammlung wie die xG firewall (von Jeff Starr) in Contao CMS konfiguriert wird.
 
 ## Ziel
