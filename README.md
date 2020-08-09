@@ -105,14 +105,14 @@ In 7g_log.php kann das Logging etwas angepasst werden:
 `define('SEVENGSTATUS', 403); // 403 = Forbidden`
 ### Dateiname des Logs
 `define('SEVENGLOGFILE', '7g_log.txt');`
-## Länge des User Agents
+### Länge des User Agents
 `define('SEVENGUALENGTH', 0); // 0 = all`
-## Angezeigter Blocked-Text
+### Angezeigter Blocked-Text
 `define('SEVENGEXIT', 'Goodbye');`
 
 Änderungsbeispiel
 `define('SEVENGEXIT', '7G: Error - 403. Byebye');`
-## Zeitzone des Logs
+### Zeitzone des Logs
 `date_default_timezone_set('UTC');`
 
 Änderungsbeispiel für die passende Zeitzone in Deutschland
