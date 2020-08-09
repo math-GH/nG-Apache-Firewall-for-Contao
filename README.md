@@ -97,6 +97,27 @@ weitere Zeilen: 96-98, 113-115, 126-128, 140-142, 153-155
 ### /web/systems Ordner blockiert
 * siehe Issue#2 (inkl. Lösung): https://github.com/mathContao/nG-Apache-Firewall-for-Contao/issues/2
 
+## Logging Konfigurationen
+In 7g_log.php kann das Logging etwas angepasst werden:
+### Logging Verzeichnis
+`define('SEVENGLOGPATH', dirname(__FILE__) .'/');`
+### HTTP Error-Code
+`define('SEVENGSTATUS', 403); // 403 = Forbidden`
+### Dateiname des Logs
+`define('SEVENGLOGFILE', '7g_log.txt');`
+## Länge des User Agents
+`define('SEVENGUALENGTH', 0); // 0 = all`
+## Angezeigter Blocked-Text
+`define('SEVENGEXIT', 'Goodbye');`
+
+Änderungsbeispiel
+`define('SEVENGEXIT', '7G: Error - 403. Byebye');`
+## Zeitzone des Logs
+`date_default_timezone_set('UTC');`
+
+Änderungsbeispiel für die passende Zeitzone in Deutschland
+`date_default_timezone_set('UTC+2');`
+
 ---
 Lizenz: diese (deutsche) Dokumentation stelle ich ebenfalls unter Open Source Lizenz: [CC-BY 3.0](https://creativecommons.org/licenses/by/3.0/de/)
 
