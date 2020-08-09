@@ -90,3 +90,7 @@ weitere Zeilen: 96-98, 113-115, 126-128, 140-142, 153-155
 ### Schritt 8: Log einsehen
 * per FTP die Datei /web/7g_log.txt aufrufen
 * weitere Detailinfos siehe in der Dokumentation: https://perishablepress.com/7g-firewall-log-blocked-requests/#reading
+
+## Bekannte Probleme
+### Layout defekt/CSS-Datei wird nicht mehr geladen
+* siehe Issue#1 (inkl. Lösung): https://github.com/mathContao/nG-Apache-Firewall-for-Contao/issues/1
