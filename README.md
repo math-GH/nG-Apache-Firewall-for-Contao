@@ -121,5 +121,5 @@ In 7g_log.php kann das Logging etwas angepasst werden:
 `date_default_timezone_set('UTC+2');`
 
 ---
-Lizenz: diese (deutsche) Dokumentation stelle ich ebenfalls unter Open Source Lizenz: [CC-BY 3.0](https://creativecommons.org/licenses/by/3.0/de/)
+Lizenz: MIT (siehe LICENCE.md)
 
