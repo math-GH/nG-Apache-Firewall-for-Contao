@@ -13,6 +13,7 @@
       "htaccess",
       "Apache"
     ],
+    "license": "MIT",
     "authors": [
         {
             "name": "mathContao",
