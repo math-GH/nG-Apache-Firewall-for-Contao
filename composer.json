@@ -31,7 +31,10 @@
         "php": "^7.2",
         "contao/core-bundle": "^4.4"
     },
-    "extra": {
-        "contao-manager-plugin": "mathcontao\\ng-apache-firewall-for-contao\\ContaoManager\\Plugin"
+     "conflict": {
+        "contao/manager-plugin": "<2.0 || >=3.0"
+    },
+    "require-dev": {
+        "contao/manager-plugin": "^2.0"
     }
 }
