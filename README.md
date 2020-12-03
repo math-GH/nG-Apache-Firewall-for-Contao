@@ -120,6 +120,24 @@ In 7g_log.php kann das Logging etwas angepasst werden:
 
 `date_default_timezone_set('UTC+2');`
 
+## Erfahrungen
+### 3. Dezember 2020
+Meine Webseite läuft seit ca. 2 Monaten (~70 Tage) mit 7G. Das Block-Log ist ca. 1MB groß (3879 Zeilen). Die Firewall macht eine sehr gute Arbeit.
+Blockierte Zugriffe:
+* 1375 Zugriffe von http://www.opensiteexplorer.org/dotbot
+* 122 Zugriffe von einem ominösen "python" Skripten
+* 501 Zugriffe von 360Spider
+* 62 Zugriffe von Ahref
+* 334 Zugriffe von mj12bot
+* 12 Zugriffe von SeznamBot
+* Sogar die Plagiat-Prüf-Software Turnitin wollte sich hier umschauen
+
+Sicherheit
+* 24 Zugriffe einer ominösen webseite, die Ihre URL unterschummeln wollte.
+* 1403 Zugriffe, die Select-Datenbank-Anfragen über die Parameter versuchte
+* 408 Zugriffe, die wohl ein Benchmark-Abfrage über die CMD versuchte
+* 123 Zugriffe suchten nach wp-content oder wp-admin
+
 ---
 Lizenz: MIT (siehe LICENCE.md)
 
