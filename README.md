@@ -1,4 +1,6 @@
 [![Latest Version on Packagist](http://img.shields.io/packagist/v/mathcontao/ng-apache-firewall-for-contao.svg?style=flat)](https://packagist.org/packages/mathcontao/ng-apache-firewall-for-contao)
+[![Installations via composer per month](http://img.shields.io/packagist/dm/mathcontao/ng-apache-firewall-for-contao.svg?style=flat)](https://packagist.org/packages/mathcontao/ng-apache-firewall-for-contao)
+[![Installations via composer total](http://img.shields.io/packagist/dt/mathcontao/ng-apache-firewall-for-contao.svg?style=flat)](https://packagist.org/packages/mathcontao/ng-apache-firewall-for-contao)
 
 # nG-Apache-Firewall-for-Contao
 Just a little collection how to configure the nG firewall (made by Jeff Starr) in Contao CMS.
