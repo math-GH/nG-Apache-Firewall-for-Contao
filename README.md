@@ -142,6 +142,8 @@ Sicherheit
 * 408 Zugriffe, die wohl ein Benchmark-Abfrage über die CMD versuchte
 * 123 Zugriffe suchten nach wp-content oder wp-admin
 
+Im Wiki finden sich nun Beispiele, die schadhafte Angriffe dokumentieren, die geblockt wurden.
+
 ---
 Lizenz: MIT (siehe LICENCE.md)
 
