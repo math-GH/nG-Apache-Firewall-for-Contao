@@ -33,14 +33,17 @@
 	Notes:
 	
 	In log entries, matching firewall patterns are indicated via brackets like [this]
+    
+    
+    MODIFIED for Contao CMS. See https://github.com/mathContao/nG-Apache-Firewall-for-Contao
 	
 */
 
 define('SEVENGLOGPATH', dirname(__FILE__) .'/');
 
-define('SEVENGSTATUS', 403); // 403 = Forbidden
+define('SEVENGSTATUS', 404); // 404 = Not found
 
-define('SEVENGLOGFILE', '../logs/7g_log.txt');
+define('SEVENGLOGFILE', '../var/logs/7g_log_'.date('Y-m-d').'.txt');
 
 define('SEVENGUALENGTH', 0); // 0 = all
 
