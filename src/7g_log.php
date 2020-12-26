@@ -3,7 +3,7 @@
 	
 	7G Firewall : Log Blocked Requests
 	
-	Version 1.1 2019/07/27 by Jeff Starr
+	Version 1.2 2020/09/07 by Jeff Starr
 	
 	https://perishablepress.com/7g-firewall/
 	https://perishablepress.com/7g-firewall-log-blocked-requests/
@@ -22,9 +22,9 @@
 	
 	2. Configure 7G Firewall for logging (via tutorial)
 	
-	2. Add log.php + log.txt to root web directory
+	2. Add 7G_log.php + 7G_log.txt to root web directory
 	
-	3. Make log.txt writable and protect via .htaccess
+	3. Make 7G_log.txt writable and protect via .htaccess
 	
 	4. Edit the five lines/options below if necessary
 	
@@ -34,14 +34,13 @@
 	
 	In log entries, matching firewall patterns are indicated via brackets like [this]
     
-    
     MODIFIED for Contao CMS. See https://github.com/mathContao/nG-Apache-Firewall-for-Contao
 	
 */
 
 define('SEVENGLOGPATH', dirname(__FILE__) .'/');
 
-define('SEVENGSTATUS', 404); // 404 = Not found
+define('SEVENGSTATUS', 403); // 403 = Forbidden
 
 define('SEVENGLOGFILE', '../var/logs/7g_log_'.date('Y-m-d').'.txt');
 
@@ -171,7 +170,7 @@ function perishablePress_7G_user_agent() {
 	
 	$string = isset($_SERVER['HTTP_USER_AGENT']) ? $_SERVER['HTTP_USER_AGENT'] : ''; 
 	
-	$string = (!empty(SEVENGUALENGTH)) ? substr($string, 0, SEVENGUALENGTH) : $string;
+	$string = (defined(SEVENGUALENGTH)) ? substr($string, 0, SEVENGUALENGTH) : $string;
 	
 	$match = isset($_SERVER['REDIRECT_7G_USER_AGENT']) ? $_SERVER['REDIRECT_7G_USER_AGENT'] : '';
 	
