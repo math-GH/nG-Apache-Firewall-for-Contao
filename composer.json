@@ -44,5 +44,5 @@
         "classmap": [
             "src/Resources/contao"
         ]
-    },
+    }
 }
