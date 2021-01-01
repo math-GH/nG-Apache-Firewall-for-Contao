@@ -40,6 +40,9 @@
     "autoload": {
         "psr-4": {
             "MathContao\\ngApacheFirewallForContao\\": "src/"
-        }
-    },
+        },
+        "classmap": [
+            "src/Resources/contao"
+        ]
+    }
 }
