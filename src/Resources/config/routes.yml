@@ -1,0 +1,4 @@
+# config/routes.yml
+mathcontao_ng_apache_firewall_for_contao.controller:
+    resource: ../../../src/Controller
+    type: annotation

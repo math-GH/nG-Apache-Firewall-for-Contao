@@ -1,0 +1,9 @@
+services:
+
+
+
+    # Custom route
+    Mathcontao\NGApacheFirewallForContao\Controller\MyCustomController:
+        arguments:
+            - '@twig'
+        public: true

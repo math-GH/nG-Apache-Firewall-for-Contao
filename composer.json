@@ -1,45 +1,56 @@
 {
-    "name": "mathcontao/ng-apache-firewall-for-contao",
-    "description": "Just a little collection how to configure the nG firewall (made by Jeff Starr) in Contao CMS. Eine kleine Sammlung wie die nG firewall (von Jeff Starr) in Contao CMS konfiguriert wird.",
+    "name": "mathcontao/nG-Apache-Firewall-for-contao",
+    "description": "Just a little collection how to configure the nG firewall - made by Jeff Starr - in Contao CMS. Eine kleine Sammlung wie die nG firewall - von Jeff Starr - in Contao CMS konfiguriert wird.",
     "keywords": [
-      "Contao",
-      "Security",
-      "Firewall",
-      "Sicherheit",
-      "Spam-Schutz",
-      "6G Firewall",
-      "7G Firewall",
-      "Jeff Starr",
-      "htaccess",
-      "Apache"
+        "Contao",
+        "Security",
+        "Firewall",
+        "Sicherheit",
+        "Spam-Schutz",
+        "7G Firewall",
+        "Jeff Starr",
+        "htaccess",
+        "Apache"
     ],
-    "license": "MIT",
+    "type": "contao-bundle",
+    "license": "GPL-3.0-or-later",
     "authors": [
         {
             "name": "mathContao",
-            "homepage": "https://github.com/mathContao/nG-Apache-Firewall-for-Contao/"
+            "homepage": "https://github.com/mathContao/nG-Apache-Firewall-for-Contao/",
+            "role": "Developer"
         }
     ],
     "support": {
-        "issues": "https://github.com/mathContao/nG-Apache-Firewall-for-Contao/issues",
-        "source": "https://github.com/mathContao/nG-Apache-Firewall-for-Contao/",
-        "forum": "https://community.contao.org/de/showthread.php?78629-Anleitung-simple-Firewall-f%C3%BCr-Contao-mit-Hilfe-von-7G-Firewall",
-        "docs": "https://github.com/mathContao/nG-Apache-Firewall-for-Contao/"
+        "issues": "https://github.com/mathcontao/nG-Apache-Firewall-for-contao/issues",
+        "source": "https://github.com/mathcontao/nG-Apache-Firewall-for-contao"
     },
-    "type": "contao-bundle",
     "require": {
-        "php": "^7.2",
-        "contao/core-bundle": "^4.4"
-    },
-     "conflict": {
-        "contao/manager-plugin": "<2.0 || >=3.0"
+        "contao/core-bundle": "^4.9"
     },
     "require-dev": {
-        "contao/manager-plugin": "^2.0"
+        "contao/easy-coding-standard": "^3.0",
+        "contao/manager-plugin": "^2.3",
+        "contao/test-case": "^4.0",
+        "phpunit/phpunit": "^8.4",
+        "symfony/http-client": "4.4.*",
+        "symfony/phpunit-bridge": "4.4.*"
     },
     "autoload": {
         "psr-4": {
-            "MathContao\\ngApacheFirewallForContao\\": "src/"
-        }
+            "Mathcontao\\NGApacheFirewallForContao\\": "src/"
+        },
+        "classmap": [
+            "src/Resources/contao"
+        ],
+        "exclude-from-classmap": [
+            "src/Resources/contao/config",
+            "src/Resources/contao/dca",
+            "src/Resources/contao/languages",
+            "src/Resources/contao/templates"
+        ]
+    },
+    "extra": {
+        "contao-manager-plugin": "Mathcontao\\NGApacheFirewallForContao\\ContaoManager\\Plugin"
     }
 }
