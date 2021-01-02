@@ -50,29 +50,10 @@ class MyCustomController extends AbstractController
      */
     public function __invoke()
     {
-        $animals = [
-
-            [
-                'species' => 'dogs',
-                'color'   => 'white'
-            ],
-            [
-                'species' => 'birds',
-                'color'   => 'black'
-            ], [
-                'species' => 'cats',
-                'color'   => 'pink'
-            ], [
-                'species' => 'cows',
-                'color'   => 'yellow'
-            ],
-        ];
 
         return new Response($this->twig->render(
             '@MathcontaoNGApacheFirewallForContao/MyCustom/my_custom.html.twig',
-            [
-                'animals' => $animals,
-            ]
+            [ ]
         ));
     }
 }
