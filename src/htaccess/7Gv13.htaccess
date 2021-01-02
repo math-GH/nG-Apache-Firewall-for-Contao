@@ -6,6 +6,10 @@
 # @ https://perishablepress.com/7g-firewall/
 #
 # modified for Contao CMS. See https://github.com/mathContao/nG-Apache-Firewall-for-Contao
+#
+# modified rules are marked with "MODIFIED"
+#
+# DISCLAIMER: Logging is enabled. Disable it for productive mode.
 ###########################################################################
 
 # 7G:[CORE]
@@ -57,7 +61,8 @@ RewriteBase /
 
 	# RewriteRule .* - [F,L]
 
-	RewriteRule .* /7G_log.php?log [END,NE,E=7G_QUERY_STRING:%1___%2___%3]
+	### logging enabled (default): comment the line before + uncomment the next line
+	RewriteRule .* /bundles/mathcontaongapachefirewallforcontao/7G_log.php?log [END,NE,E=7G_QUERY_STRING:%1___%2___%3]
 
 </IfModule>
 
@@ -71,7 +76,7 @@ RewriteBase /
 	RewriteCond %{REQUEST_URI} (\.)(php)(\()?([0-9]+)(\))?(/)?$ [NC,OR]
 	RewriteCond %{REQUEST_URI} (/)(vbulletin|boards|vbforum)(/)? [NC,OR]
 	RewriteCond %{REQUEST_URI} (\.(s?ftp-?)config|(s?ftp-?)config\.) [NC,OR]
-	# RewriteCond %{REQUEST_URI} (\{0\}|\"?0\"?=\"?0|\(/\(|\.\.\.|\+\+\+|\\\") [NC,OR]
+	# MODIFIED RewriteCond %{REQUEST_URI} (\{0\}|\"?0\"?=\"?0|\(/\(|\.\.\.|\+\+\+|\\\") [NC,OR]
 	RewriteCond %{REQUEST_URI} (thumbs?(_editor|open)?|tim(thumbs?)?)(\.php) [NC,OR]
 	RewriteCond %{REQUEST_URI} (/)(fck|ckfinder|fullclick|ckfinder|fckeditor) [NC,OR]
 	RewriteCond %{REQUEST_URI} (\.|20)(get|the)(_)(permalink|posts_page_url)(\() [NC,OR]
@@ -93,7 +98,8 @@ RewriteBase /
 
 	# RewriteRule .* - [F,L]
 
-	RewriteRule .* /7G_log.php?log [END,NE,E=7G_REQUEST_URI:%1___%2___%3]
+	### logging enabled (default): comment the line before + uncomment the next line
+	RewriteRule .* /bundles/mathcontaongapachefirewallforcontao/7G_log.php?log [END,NE,E=7G_REQUEST_URI:%1___%2___%3]
 
 </IfModule>
 
@@ -105,10 +111,14 @@ RewriteBase /
 	RewriteCond %{HTTP_USER_AGENT} ((c99|php|web)shell|remoteview|site((.){0,2})copier) [NC,OR]
 	RewriteCond %{HTTP_USER_AGENT} (base64_decode|bin/bash|disconnect|eval|lwp-download|unserialize|\\\x22) [NC,OR]
 	RewriteCond %{HTTP_USER_AGENT} (360Spider|acapbot|acoonbot|ahrefs|alexibot|asterias|attackbot|backdorbot|becomebot|binlar|blackwidow|blekkobot|blexbot|blowfish|bullseye|bunnys|butterfly|careerbot|casper|checkpriv|cheesebot|cherrypick|chinaclaw|choppy|clshttp|cmsworld|copernic|copyrightcheck|cosmos|crescent|cy_cho|datacha|demon|diavol|discobot|dittospyder|dotbot|dotnetdotcom|dumbot|emailcollector|emailsiphon|emailwolf|exabot|extract|eyenetie|feedfinder|flaming|flashget|flicky|foobot|g00g1e|getright|gigabot|go-ahead-got|gozilla|grabnet|grafula|harvest|heritrix|httrack|icarus6j|jetbot|jetcar|jikespider|kmccrew|leechftp|libweb|linkextractor|linkscan|linkwalker|loader|masscan|miner|majestic|mechanize|mj12bot|morfeus|moveoverbot|netmechanic|netspider|nicerspro|nikto|ninja|nutch|octopus|pagegrabber|planetwork|postrank|proximic|purebot|pycurl|python|queryn|queryseeker|radian6|radiation|realdownload|rogerbot|scooter|seekerspider|semalt|siclab|sindice|sistrix|sitebot|siteexplorer|sitesnagger|skygrid|smartdownload|snoopy|sosospider|spankbot|spbot|sqlmap|stackrambler|stripper|sucker|surftbot|sux0r|suzukacz|suzuran|takeout|teleport|telesoft|true_robots|turingos|turnit|vampire|vikspider|voideye|webleacher|webreaper|webstripper|webvac|webviewer|webwhacker|winhttp|wwwoffle|woxbot|xaldon|xxxyy|yamanalab|yioopbot|youda|zeus|zmeu|zune|zyborg) [NC]
+	# MODIFIED added user agents from https://community.cloudflare.com/t/top-50-user-agents-to-block/222594/4
+    RewriteCond %{HTTP_USER_AGENT} (adbeat|admantx|appinsights|ahrefsbot|awariosmartbot|barkrowler|bomborabot|buck|bvbot|cincraw|clickagy|cocolyzebot|domcopbot|domainstatsbot|df bot 1.0|embed.ly|grapeshotcrawler|gulperbot|linguee|internet-structure-research-project-bot|linkfluence|magpie-crawler|mediatoolkitbot|megaindex|nimbostratus|omgili|onalyticabot|petalbot|pubmatic|riddler|sbl-bot|seekport|semantic-visions|semanticbot|semrushbot|serpstatbot|sogou|traackr|trendictionbot|voluumdsp|webtechbot|whatcms) [NC]
+    # MODIFIED more user agents of bots are listed on https://www.cimtools.net/en/extra/bots_list.php
 
 	# RewriteRule .* - [F,L]
 
-	RewriteRule .* /7G_log.php?log [END,NE,E=7G_USER_AGENT:%1]
+	### logging enabled (default): comment the line before + uncomment the next line
+	RewriteRule .* /bundles/mathcontaongapachefirewallforcontao/7G_log.php?log [END,NE,E=7G_USER_AGENT:%1]
 
 </IfModule>
 
@@ -119,7 +129,8 @@ RewriteBase /
 
 	# RewriteRule .* - [F,L]
 
-	RewriteRule .* /7G_log.php?log [END,NE,E=7G_REMOTE_HOST:%1]
+	### logging enabled (default): comment the line before + uncomment the next line
+	RewriteRule .* /bundles/mathcontaongapachefirewallforcontao/7G_log.php?log [END,NE,E=7G_REMOTE_HOST:%1]
 
 </IfModule>
 
@@ -131,7 +142,8 @@ RewriteBase /
 
 	# RewriteRule .* - [F,L]
 
-	RewriteRule .* /7G_log.php?log [END,NE,E=7G_HTTP_REFERRER:%1]
+	### logging enabled (default): comment the line before + uncomment the next line
+	RewriteRule .* /bundles/mathcontaongapachefirewallforcontao/7G_log.php?log [END,NE,E=7G_HTTP_REFERRER:%1]
 
 </IfModule>
 
@@ -142,7 +154,8 @@ RewriteBase /
 
 	# RewriteRule .* - [F,L]
 
-	RewriteRule .* /7G_log.php?log [END,NE,E=7G_REQUEST_METHOD:%1]
+	### logging enabled (default): comment the line before + uncomment the next line
+	RewriteRule .* /bundles/mathcontaongapachefirewallforcontao/7G_log.php?log [END,NE,E=7G_REQUEST_METHOD:%1]
 
 </IfModule>
 
