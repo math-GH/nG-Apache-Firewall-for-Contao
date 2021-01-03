@@ -71,7 +71,7 @@ RewriteBase /
 <IfModule mod_rewrite.c>
 
     # MODIFIED: added to block WordPress/Joomla requests:
-    RewriteCond %{REQUEST_URI} ^(/)(wp-admin|admin|login)(/)?$ [NC,OR]
+    RewriteCond %{REQUEST_URI} ^(/)(wordpress|wp-admin|admin|login)(/)?$ [NC,OR]
     RewriteCond %{REQUEST_URI} (/)(emergency.php)(/)? [NC,OR]
     
     # MODIFIED: added to block requests to contao-manager.php (rename this file before uncommenting the next line):
