@@ -42,7 +42,7 @@ define('SEVENGLOGPATH', dirname(__FILE__) .'/');
 
 define('SEVENGSTATUS', 403); // 403 = Forbidden
 
-define('SEVENGLOGFILE', '../var/logs/7g_log_'.date('Y-m-d').'.txt');
+define('SEVENGLOGFILE', '../../../../../../var/logs/7g_log_'.date('Y-m-d').'.txt');
 
 define('SEVENGUALENGTH', 0); // 0 = all
 
